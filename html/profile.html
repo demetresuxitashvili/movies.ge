@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav>
+        <h1>MovieApp</h1>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="watchlist.html">Watchlist</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="profile">
+
+        <img
+            id="profileImage"
+            src="https://via.placeholder.com/150"
+            alt="Profile"
+        >
+
+        <h2 id="username"></h2>
+
+        <p id="email"></p>
+
+        <input
+            type="file"
+            id="imageInput"
+            accept="image/*"
+        >
+
+        <button id="saveImage">
+            Save Photo
+        </button>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </div>
+    <script src="../js/profile.js"></script>
+</body>
+</html>
