@@ -1,0 +1,94 @@
+{
+  "movies": [
+    {
+      "id": 111,
+      "Title": "Avatar",
+      "Year": 2009,
+      "genre": "Science Fiction",
+      "director": "James Cameron",
+      "description": "A visually stunning sci-fi adventure about humanity's conflict with the Na'vi on the planet Pandora.",
+      "Poster": "https://upload.wikimedia.org/wikipedia/en/d/d6/Avatar_%282009_film%29_poster.jpg"
+    },
+    {
+      "id": 24221,
+      "Title": "Titanic",
+      "Year": 1997,
+      "genre": "Drama / Romance",
+      "director": "James Cameron",
+      "description": "A romantic drama set aboard the ill-fated RMS Titanic during its maiden voyage.",
+      "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMzsZYpklmQ-dGmLsdqTfiqRTqSA2YRbHPSQ&s"
+    },
+    {
+      "id": 32222222,
+      "Title": "The Dark Knight",
+      "Year": 2008,
+      "genre": "Action / Crime",
+      "director": "Christopher Nolan",
+      "description": "Batman faces his greatest enemy, the Joker, in a battle for Gotham City.",
+      "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd-QcyjtJ0PwVy5ZODR2bXvlgY_9mCgCp4Mw&s"
+    },
+    {
+      "id": 4124144,
+      "Title": "Inception",
+      "Year": 2010,
+      "genre": "Science Fiction",
+      "director": "Christopher Nolan",
+      "description": "A skilled thief enters people's dreams to steal secrets and perform impossible missions.",
+      "Poster": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg"
+    },
+    {
+      "id": 4124125,
+      "Title": "Interstellar",
+      "Year": 2014,
+      "genre": "Science Fiction",
+      "director": "Christopher Nolan",
+      "description": "Astronauts travel through a wormhole in search of a new home for humanity.",
+      "Poster": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"
+    },
+    {
+      "id": 6412414,
+      "Title": "Avengers: Endgame",
+      "Year": 2019,
+      "genre": "Action / Superhero",
+      "director": "Anthony Russo, Joe Russo",
+      "description": "The Avengers unite for one final battle against Thanos to restore the universe.",
+      "Poster": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg"
+    },
+    {
+      "id": 71241,
+      "Title": "The Matrix",
+      "Year": 1999,
+      "genre": "Science Fiction",
+      "director": "The Wachowskis",
+      "description": "A hacker discovers the truth about reality and joins the fight against intelligent machines.",
+      "Poster": "https://m.media-amazon.com/images/I/613ypTLZHsL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "id": 81242,
+      "Title": "Joker",
+      "Year": 2019,
+      "genre": "Drama / Thriller",
+      "director": "Todd Phillips",
+      "description": "The origin story of Arthur Fleck, a failed comedian who becomes Gotham's infamous Joker.",
+      "Poster": "https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg"
+    },
+    {
+      "id": 91241,
+      "Title": "Spider-Man: No Way Home",
+      "Year": 2021,
+      "genre": "Action / Adventure",
+      "director": "Jon Watts",
+      "description": "Peter Parker's identity is revealed, leading to a multiverse adventure.",
+      "Poster": "https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg"
+    },
+    {
+      "id": 14124210,
+      "Title": "Dune",
+      "Year": 2021,
+      "genre": "Science Fiction",
+      "director": "Denis Villeneuve",
+      "description": "Paul Atreides embarks on a journey across the dangerous desert planet Arrakis.",
+      "Poster": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg"
+    }
+  ]
+}
