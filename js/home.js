@@ -1,122 +1,103 @@
 const API_KEY = "5e7f829a";
 const URL = `https://www.omdbapi.com/?apikey=${API_KEY}&s=movie`;
-
 const moviesContainer = document.getElementById("movies");
 const searchInput = document.getElementById("search");
 const sortSelect = document.getElementById("sort");
-const movies2 = document.getElementById("movies2")
-const btn5 = document.getElementById("btn5")
-const btn6 = document.getElementById("btn6")
+const toggleBtn = document.getElementById("toggleBtn");
 
-let movies = [];
+let apiMovies = [];
+let localMovies = [];
+let currentMovies = [];
+let isExpanded = false;
 
 async function getMovies() {
-  const response = await fetch(URL);
-  const result = await response.json();
+  try {
+    const response = await fetch(URL);
+    const result = await response.json();
+    apiMovies = result.Search || [];
 
-  const data = result.Search || [];
+    const localResponse = await fetch("../json/data.json");
+    localMovies = await localResponse.json();
 
-  movies = data;
+    updateMoviesList();
+  } catch (error) {
+    console.error(error);
+  }
+}
 
-  displayMovies(movies);
+function updateMoviesList() {
+  currentMovies = isExpanded ? [...apiMovies, ...localMovies] : [...apiMovies];
+  toggleBtn.innerText = isExpanded ? "Show Less" : "Show More";
+  
+  const searchValue = searchInput.value.toLowerCase();
+  const filtered = currentMovies.filter((movie) => 
+    movie.Title.toLowerCase().includes(searchValue)
+  );
+
+  displayMovies(filtered);
 }
 
 function displayMovies(arr) {
   moviesContainer.innerHTML = "";
-
-  arr.forEach((movie, index) => {
+  arr.forEach((movie) => {
     moviesContainer.innerHTML += `
-            <div class="card">
-
-                <img src="${movie.Poster}" alt="${movie.Title}">
-
-                <h2>${movie.Title}</h2>
-
-                <p>Year: ${movie.Year}</p>
-
-                <button onclick="addToWatchlist(${index})">
-                    ❤️
-                </button>
-
-            </div>
-        `;
+      <div class="card">
+        <img src="${movie.Poster}" alt="${movie.Title}">
+        <h2>${movie.Title}</h2>
+        <p>Year: ${movie.Year}</p>
+        <button onclick="addToWatchlist('${movie.imdbID}')">
+          ❤️
+        </button>
+      </div>
+    `;
   });
 }
 
+toggleBtn.addEventListener("click", function() {
+  isExpanded = !isExpanded;
+  updateMoviesList();
+});
+
 searchInput.addEventListener("input", function () {
   const value = this.value.toLowerCase();
-
-  const filtered = movies.filter((movie) =>
-    movie.Title.toLowerCase().includes(value),
-  );
-
+  const filtered = currentMovies.filter((movie) => movie.Title.toLowerCase().includes(value));
   displayMovies(filtered);
 });
 
 sortSelect.addEventListener("change", function () {
-  let sorted = [...movies];
-
   if (this.value === "year") {
-    sorted.sort((a, b) => b.Year - a.Year);
+    apiMovies.sort((a, b) => b.Year - a.Year);
+    localMovies.sort((a, b) => b.Year - a.Year);
   }
-
-  displayMovies(sorted);
+  updateMoviesList();
 });
 
-function addToWatchlist(index) {
-  const movie = movies[index];
+function addToWatchlist(id) {
+  const currentUser = localStorage.getItem('currentUser');
 
+  if(!currentUser){
+    alert('please login to add movies to wathlist');
+    location.href = 'login.html';
+    return;
+  }
+  const movie = currentMovies.find((m) => m.imdbID === id);
   let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
-
-  const exists = watchlist.find((item) => item.Title === movie.Title);
-
+  const exists = watchlist.find((item) => item.imdbID === id);
+  
   if (exists) {
     alert("Movie already added!");
     return;
   }
-
+  
   watchlist.push(movie);
-
   localStorage.setItem("watchlist", JSON.stringify(watchlist));
-
   alert("Movie added successfully!");
 }
 
 getMovies();
 
 const logoutBtn = document.getElementById("logoutBtn");
-
 logoutBtn.addEventListener("click", () => {
   localStorage.removeItem("currentUser");
-
   location.href = "login.html";
 });
-
-btn5.addEventListener("click", async () => {
-  const response = await fetch("../json/data.json")
-  const data = await response.json()
-  movies2.innerHTML = ""
-  data.movies.forEach(m => {
-    movies2.innerHTML += `<div class="card">
-
-                <img src="${m.Poster}" alt="${m.Title}">
-
-                <h2>${m.Title}</h2>
-
-                <p>Year: ${m.Year}</p>
-
-                <button onclick="addToWatchlist(${m.id})">
-                    ❤️
-                </button>
-
-            </div>`
-  })
-  btn5.style.display = "none"
-  btn6.style.display = "inline"
-})
-
-btn6.addEventListener("click", () => {
-  movies2.innerHTML = ""
-  btn5.style.display = "inline"
-  btn6.style.display = "none"
-})

@@ -10,39 +10,28 @@
     <nav>
       <h1>MovieApp</h1>
       <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="watchlist.html">Watchlist</a>
-        </li>
-        <li>
-          <a href="profile.html">Profile</a>
-        </li>
-        <li>
-          <a href="login.html">Login</a>
-        </li>
-        <li>
-          <a href="register.html">Register</a>
-        </li>
-        <li>
-          <button id="logoutBtn">Logout</button>
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="watchlist.html">Watchlist</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><button id="logoutBtn">Logout</button></li>
       </ul>
     </nav>
     <header>
       <input type="text" id="search" placeholder="Search movie..." />
-
       <select id="sort">
         <option value="default">Sort</option>
-
         <option value="year">Year</option>
       </select>
     </header>
+
     <main id="movies"></main>
-    <div id="movies2"></div>
-    <button id="btn5">Show more</button>
-    <button id="btn6">Show less</button>
+
+    <div id="btnContainer" style="text-align: center; margin: 20px;">
+        <button id="toggleBtn">Show More</button>
+    </div>
+
     <footer id="footer">
       <h1 id="h1">films</h1> <br>
       <a href="./index.html" id="a1">home</a> <br>
@@ -53,6 +42,7 @@
       <h1 id="h3">contact us</h1> <br>
       <p id="p1">phone: 598130813</p>
     </footer>
+
     <script src="../js/home.js"></script>
   </body>
 </html>
