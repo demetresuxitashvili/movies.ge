@@ -16,7 +16,7 @@ async function getMovies() {
     const result = await response.json();
     apiMovies = result.Search || [];
 
-    const localResponse = await fetch("../json/data.json");
+    const localResponse = await fetch("../data.json");
     localMovies = await localResponse.json();
 
     updateMoviesList();
@@ -42,12 +42,12 @@ function displayMovies(arr) {
   arr.forEach((movie) => {
     moviesContainer.innerHTML += `
       <div class="card">
-        <img src="${movie.Poster}" alt="${movie.Title}">
-        <h2>${movie.Title}</h2>
+        <a href="movie-details.html?id=${movie.imdbID}">
+          <img src="${movie.Poster}" alt="${movie.Title}">
+          <h2>${movie.Title}</h2>
+        </a>
         <p>Year: ${movie.Year}</p>
-        <button onclick="addToWatchlist('${movie.imdbID}')">
-          ❤️
-        </button>
+        <button onclick="addToWatchlist('${movie.imdbID}')"> Watchlist </button>
       </div>
     `;
   });
@@ -73,6 +73,7 @@ sortSelect.addEventListener("change", function () {
 });
 
 function addToWatchlist(id) {
+
   const currentUser = localStorage.getItem('currentUser');
 
   if(!currentUser){
@@ -80,6 +81,7 @@ function addToWatchlist(id) {
     location.href = 'login.html';
     return;
   }
+
   const movie = currentMovies.find((m) => m.imdbID === id);
   let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
   const exists = watchlist.find((item) => item.imdbID === id);

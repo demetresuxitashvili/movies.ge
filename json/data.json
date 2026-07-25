@@ -3,61 +3,71 @@
     "imdbID": "local_m1",
     "Title": "The Dark Knight",
     "Year": "2008",
-    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd-QcyjtJ0PwVy5ZODR2bXvlgY_9mCgCp4Mw&s"
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd-QcyjtJ0PwVy5ZODR2bXvlgY_9mCgCp4Mw&s",
+    "trailer": "../videos/darkKnight.mp4"
   },
   {
     "imdbID": "local_m2",
     "Title": "Inception",
     "Year": "2010",
-    "Poster": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg"
+    "Poster": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
+    "trailer": "../videos/inception.mp4"
   },
   {
     "imdbID": "local_m3",
     "Title": "Interstellar",
     "Year": "2014",
-    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0zt0lp-O3XdL8zzdrEvyzmcl6kOwfgbv4xQ&s"
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0zt0lp-O3XdL8zzdrEvyzmcl6kOwfgbv4xQ&s",
+    "trailer": "../videos/interstellar.mp4"   
   },
   {
     "imdbID": "local_m4",
     "Title": "The Matrix",
     "Year": "1999",
-    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfSjSWOCaw5dnDL2GT1zFd9RMCgUGw5Q2Cfg&s"
+    "Poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfSjSWOCaw5dnDL2GT1zFd9RMCgUGw5Q2Cfg&s",
+    "trailer": "../videos/matrix.mp4"
   },
   {
     "imdbID": "local_m5",
     "Title": "Pulp Fiction",
     "Year": "1994",
-    "Poster": "https://variety.com/wp-content/uploads/2024/10/MSDPUFI_EC077.jpg"
+    "Poster": "https://variety.com/wp-content/uploads/2024/10/MSDPUFI_EC077.jpg",
+    "trailer": "../videos/pulp.mp4"
   },
   {
     "imdbID": "local_m6",
     "Title": "Fight Club",
     "Year": "1999",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    "Poster": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "trailer": "../videos/fightClub.mp4"
   },
   {
 
     "imdbID": "local_m7",
     "Title": "Avatar",
     "Year": "2009",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BMDEzMmQwZjctZWU2My00MWNlLWE0NjItMDJlYTRlNGJiZjcyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+    "Poster": "https://m.media-amazon.com/images/M/MV5BMDEzMmQwZjctZWU2My00MWNlLWE0NjItMDJlYTRlNGJiZjcyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    "trailer": "../videos/avatar.mp4"
   },
   {
     "imdbID": "local_m8",
     "Title": "The Lord of the Rings: The Fellowship of the Ring",
     "Year": "2001",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UX1000_.jpg"
+    "Poster": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UX1000_.jpg",
+    "trailer": "../videos/hehe.mp4"
   },
   {
     "imdbID": "local_m9",
-    "Title": "The Lord of the Rings: The Two Towers",
+    "Title": "joker",
     "Year": "2002",
-    "Poster": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Joker_%282019_film%29_poster.jpg/250px-Joker_%282019_film%29_poster.jpg"
+    "Poster": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Joker_%282019_film%29_poster.jpg/250px-Joker_%282019_film%29_poster.jpg",
+    "trailer": "../videos/joker.mp4"
   },
   {
     "imdbID": "local_m10",
     "Title": "Gladiator",
     "Year": "2000",
-    "Poster": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Gladiator_%282000_film_poster%29.png/250px-Gladiator_%282000_film_poster%29.png"
+    "Poster": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Gladiator_%282000_film_poster%29.png/250px-Gladiator_%282000_film_poster%29.png",
+    "trailer": "../videos/gladiator.mp4"
   }
 ]
